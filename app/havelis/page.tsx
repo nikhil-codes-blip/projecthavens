@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import {
   MapPin,
   Star,
@@ -28,7 +28,6 @@ interface Haveli {
   location: string
   era: string
   highlight: string
-
   image: string
   description: string
   rating: number
@@ -39,7 +38,8 @@ interface Haveli {
     lat: number
     lng: number
   }
-  wikiTitle: string
+  wikiTitle?: string // Made optional since some havelis might not have Wikipedia pages
+  customLink?: string // New field for custom website links
   audioFile: string
 }
 
@@ -65,8 +65,8 @@ const translations = {
     contact: "Contact",
     followUs: "Follow Us",
     allRights: "All rights reserved.",
-    qrCodeTitle: "Wikipedia QR Code",
-    qrCodeDescription: "Scan this QR code to read more about this monument on Wikipedia",
+    qrCodeTitle: "Information QR Code",
+    qrCodeDescription: "Scan this QR code to read more about this monument",
     quickLinks: "Quick Links",
     heritageSites: "Heritage Sites",
     home: "Home",
@@ -96,8 +96,8 @@ const translations = {
     contact: "संपर्क",
     followUs: "हमें फॉलो करें",
     allRights: "सभी अधिकार सुरक्षित।",
-    qrCodeTitle: "विकिपीडिया क्यूआर कोड",
-    qrCodeDescription: "इस स्मारक के बारे में विकिपीडिया पर और पढ़ने के लिए इस क्यूआर कोड को स्कैन करें",
+    qrCodeTitle: "जानकारी क्यूआर कोड",
+    qrCodeDescription: "इस स्मारक के बारे में और पढ़ने के लिए इस क्यूआर कोड को स्कैन करें",
     quickLinks: "त्वरित लिंक",
     heritageSites: "विरासत स्थल",
     home: "होम",
@@ -128,8 +128,8 @@ const translations = {
     contact: "رابطہ",
     followUs: "ہمیں فالو کریں",
     allRights: "تمام حقوق محفوظ ہیں۔",
-    qrCodeTitle: "ویکیپیڈیا کیو آر کوڈ",
-    qrCodeDescription: "اس یادگار کے بارے میں ویکیپیڈیا پر مزید پڑھنے کے لیے اس کیو آر کوڈ کو اسکین کریں",
+    qrCodeTitle: "معلومات کیو آر کوڈ",
+    qrCodeDescription: "اس یادگار کے بارے میں مزید پڑھنے کے لیے اس کیو آر کوڈ کو اسکین کریں",
     quickLinks: "فوری لنکس",
     heritageSites: "ورثہ مقامات",
     home: "گھر",
@@ -632,7 +632,6 @@ const havelis: Haveli[] = [
     wikiTitle: "Qaisar_Bagh",
     audioFile: "kaiserbagh-audio.mp3",
   },
-
   {
     id: "shah-najaf-imambara",
     name: "Shah Najaf Imambara",
@@ -678,7 +677,8 @@ const havelis: Haveli[] = [
     timings: "10:00 AM - 5:00 PM",
     category: "visit",
     coordinates: { lat: 26.8653, lng: 80.9185 },
-    wikiTitle: "Begum_Kothi",
+    // No Wikipedia page available, using custom link
+    customLink: "https://evendo.com/locations/india/lucknow/attraction/begum-kothi",
     audioFile: "begum-kothi-audio.mp3",
   },
   {
@@ -694,7 +694,8 @@ const havelis: Haveli[] = [
     timings: "10:00 AM - 5:00 PM",
     category: "visit",
     coordinates: { lat: 26.8688, lng: 80.9311 },
-    wikiTitle: "Farhat_Baksh_Kothi",
+    // No Wikipedia page available, using custom link
+    customLink: "https://www.knocksense.com/lucknow/know-all-about-the-rich-history-of-farhat-baksh-kothi-core-of-chattar-manzil-in-lucknow",
     audioFile: "farhat-baksh-audio.mp3",
   },
   {
@@ -710,7 +711,8 @@ const havelis: Haveli[] = [
     timings: "10:00 AM - 4:00 PM",
     category: "visit",
     coordinates: { lat: 26.8611, lng: 80.9178 },
-    wikiTitle: "Darshan_Vilas_Kothi",
+    // No Wikipedia page available, using custom link
+    customLink: "https://saveourheritage.in/kothi-darshan-vilas/",
     audioFile: "darshan-vilas-audio.mp3",
   },
   {
@@ -727,7 +729,8 @@ const havelis: Haveli[] = [
     timings: "9:00 AM - 5:00 PM",
     category: "visit",
     coordinates: { lat: 26.869, lng: 80.933 },
-    wikiTitle: "Hayat_Baksh_Kothi",
+    // No Wikipedia page available, using custom link
+    customLink: "https://upgovernor.gov.in/en/page/history",
     audioFile: "hayat-baksh-audio.mp3",
   },
   {
@@ -743,7 +746,8 @@ const havelis: Haveli[] = [
     timings: "9:00 AM - 4:00 PM",
     category: "visit",
     coordinates: { lat: 26.8489, lng: 80.9462 },
-    wikiTitle: "Mubarak_Manzil",
+    // No Wikipedia page available, using custom link
+    customLink: "https://en.m.wikipedia.org/wiki/Mubarak_Manzil_(Agra)",
     audioFile: "mubarak-manzil-audio.mp3",
   },
   {
@@ -760,7 +764,8 @@ const havelis: Haveli[] = [
     timings: "10:00 AM - 5:00 PM",
     category: "visit",
     coordinates: { lat: 26.8732, lng: 80.9025 },
-    wikiTitle: "Roshan-ud-Daula",
+    // No Wikipedia page available, using custom link
+    customLink: "https://tornosindia.com/kothi-roshan-ud-daula-an-address-of-power-with-cunningness/",
     audioFile: "roshan-daula-audio.mp3",
   },
   {
@@ -776,7 +781,8 @@ const havelis: Haveli[] = [
     timings: "9:00 AM - 5:00 PM",
     category: "visit",
     coordinates: { lat: 26.872, lng: 80.9008 },
-    wikiTitle: "Kothi_Noor_Baksh",
+    // No Wikipedia page available, using custom link
+    customLink: "https://www.lucknowtourism.com/kothi-noor-baksh",
     audioFile: "noor-baksh-audio.mp3",
   },
   {
@@ -792,7 +798,8 @@ const havelis: Haveli[] = [
     timings: "8:00 AM - 6:00 PM",
     category: "visit",
     coordinates: { lat: 26.8705, lng: 80.9252 },
-    wikiTitle: "Khursheed_Manzil",
+    // No Wikipedia page available, using custom link
+    customLink: "https://lucknow.me/Khursheed-Manzil.html",
     audioFile: "khursheed-manzil-audio.mp3",
   },
   {
@@ -808,7 +815,7 @@ const havelis: Haveli[] = [
     timings: "9:00 AM - 6:00 PM",
     category: "visit",
     coordinates: { lat: 26.8717, lng: 80.918 },
-    wikiTitle: "Moti_Mahal_(Lucknow)",
+    customLink: "https://tripsamachar.com/blogs/moti-mahal-palace-lucknow-a-glimpse-of-royal-heritage",
     audioFile: "moti-mahal-audio.mp3",
   },
   {
@@ -899,9 +906,16 @@ export default function HavelisPage() {
   }
 
   const generateQRCode = (haveli: Haveli) => {
-    const mapUrl = `https://www.google.com/maps?q=${haveli.coordinates.lat},${haveli.coordinates.lng}`
-    const wikiUrl = `https://en.wikipedia.org/wiki/${haveli.wikiTitle}`
-    return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(wikiUrl)}`
+    // Use custom link if available, otherwise use Wikipedia
+    const targetUrl = haveli.customLink || `https://en.wikipedia.org/wiki/${haveli.wikiTitle}`
+    return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(targetUrl)}`
+  }
+
+  const getQRCodeDescription = (haveli: Haveli) => {
+    if (haveli.customLink) {
+      return "Scan this QR code to read more about this monument"
+    }
+    return "Scan this QR code to read more about this monument on Wikipedia"
   }
 
   const scrollToTop = () => {
@@ -932,7 +946,7 @@ export default function HavelisPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 text-[#49ce71] hover:text-white transition-colors">
+              <Link href="/explore" className="flex items-center space-x-2 text-[#49ce71] hover:text-white transition-colors">
                 <ArrowLeft className="h-5 w-5" />
                 <span className="text-sm">{t("backToHome")}</span>
               </Link>
@@ -1132,29 +1146,38 @@ export default function HavelisPage() {
                                 src={generateQRCode(haveli) ?? ""}
                                 alt={`QR for ${translatedHaveli.name}`}
                                 className="w-8 h-8 rounded border border-[#49ce71] group-hover/qr:scale-110 transition-transform"
-                                title={`Scan to open Wikipedia page for ${translatedHaveli.name}`}
+                                title={getQRCodeDescription(haveli)}
                               />
                               <div className="flex items-center space-x-1">
-                                <img
-                                  src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg"
-                                  alt="Wikipedia"
-                                  className="w-4 h-4"
-                                />
-                                <span className="text-xs text-gray-400">Wikipedia</span>
+                                {haveli.customLink ? (
+                                  <ExternalLink className="w-4 h-4 text-[#49ce71]" />
+                                ) : (
+                                  <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg"
+                                    alt="Wikipedia"
+                                    className="w-4 h-4"
+                                  />
+                                )}
+                                <span className="text-xs text-gray-400">
+                                  {haveli.customLink ? "Website" : "Wikipedia"}
+                                </span>
                               </div>
                             </div>
                           </DialogTrigger>
 
                           <DialogContent className="bg-[#222222]/95 backdrop-blur-md border-[#49ce71] text-white">
-                            <h4 className="text-lg font-semibold mb-4 text-center">{translatedHaveli.name}</h4>
+                            <DialogTitle className="text-lg font-semibold mb-4 text-center">
+                              {translatedHaveli.name}
+                            </DialogTitle>
+                            <DialogDescription className="sr-only">
+                              QR code for {translatedHaveli.name}
+                            </DialogDescription>
                             <img
                               src={generateQRCode(haveli) ?? ""}
                               alt={`QR for ${translatedHaveli.name}`}
                               className="w-64 h-64 mx-auto rounded border border-[#49ce71]"
                             />
-                            <p className="text-sm text-center mt-2 text-gray-300">
-                              Scan to open the Wikipedia page for this Haveli.
-                            </p>
+                            <p className="text-sm text-center mt-2 text-gray-300">{getQRCodeDescription(haveli)}</p>
                           </DialogContent>
                         </Dialog>
                         <Link href={`/havelis/${haveli.id}`}>
@@ -1289,7 +1312,7 @@ export default function HavelisPage() {
         </div>
       </footer>
 
-      {/* Back to Top Button - Updated Design */}
+      {/* Back to Top Button */}
       {showBackToTop && (
         <button
           onClick={scrollToTop}
@@ -1310,7 +1333,7 @@ export default function HavelisPage() {
               ✕
             </button>
             <img src={qrModalSrc || "/placeholder.svg"} alt="QR Code Enlarged" className="w-64 h-64" />
-            <p className="text-sm text-gray-300 text-center mt-2">Scan to open Wikipedia page</p>
+            <p className="text-sm text-gray-300 text-center mt-2">Scan to open information page</p>
           </div>
         </div>
       )}

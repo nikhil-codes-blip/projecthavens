@@ -992,7 +992,7 @@ export default function HaveliDetailPage() {
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="/placeholder1.svg" />
+                    <AvatarImage src="/placeholder1.png" />
                     <AvatarFallback>JD</AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
@@ -1012,7 +1012,7 @@ export default function HaveliDetailPage() {
 
                 <div className="flex items-start gap-3">
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="/placeholder1.svg" />
+                    <AvatarImage src="/placeholder2.png" />
                     <AvatarFallback>MS</AvatarFallback>
                   </Avatar>
                   <div className="flex-1">

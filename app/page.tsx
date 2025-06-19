@@ -206,8 +206,8 @@ export default function LandingPage() {
           font-size: 1rem;
           border-radius: 25px;
           cursor: pointer;
-          margin-left: 90px;
-          margin-left: 100px;
+           margin: 0 auto;
+          ;
           position: relative;
           overflow: hidden;
           transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -263,17 +263,7 @@ export default function LandingPage() {
           margin-right: 8px;
         }
 
-        .qr-icon {
-          display: inline-block;
-          margin-top: 1.5rem;
-          width: 60px;
-          height: 60px;
-          background-image: url('/images/qr.png');
-          background-size: contain;
-          background-repeat: no-repeat;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
+
 
         .animate-float {
           animation: floatQR 3s ease-in-out infinite;
