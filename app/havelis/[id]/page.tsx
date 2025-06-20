@@ -179,7 +179,7 @@ const filteredHavelis = [
   shortDescription: "A white marble pavilion built for royal ceremonies.",
   fullDescription:
     "Safed Baradari, built in early 19th century at Kaiserbagh, was constructed using gleaming white marble brought from Shahjahanpur. It served as a ceremonial pavilion for Nawabs. Its Ganga-Jamuni taint and serene proportions make it a peaceful heritage structure today.",
-  imageUrl: "/images/safed-baradari.jpg",
+  imageUrl: "/images/Safed-Baradari.jpg",
   yearBuilt: "c. 1810",
   location: "Kaiserbagh, Lucknow, Uttar Pradesh",
   visitingHours: "8:00 AM - 6:00 PM",
@@ -205,7 +205,7 @@ const filteredHavelis = [
   shortDescription: "A grand colonial mansion now serving as La Martiniere College.",
   fullDescription:
     "Constantia House, built in 1857 by Major General Claude Martin, is a magnificent colonial‑Italianate mansion featuring red brick facades, arches, Corinthian columns, and private chapel. Today, it forms part of La Martiniere College where students attend classes amid heritage architecture.",
-  imageUrl: "/images/la-martiniere.jpg",
+  imageUrl: "/images/La-Martiniere.jpg",
   yearBuilt: "1857",
   location: "La Martiniere Road, Lucknow, Uttar Pradesh",
   visitingHours: "By prior appointment",
@@ -231,7 +231,7 @@ const filteredHavelis = [
   shortDescription: "An expansive royal palace built by Nawab Wajid Ali Shah.",
   fullDescription:
     "Kaiserbagh Complex, constructed in 1848–1856 by Nawab Wajid Ali Shah, spanned over 700 acres and included palaces, gardens, courtyards, and pavilions. Though much was lost during the 1857 rebellion, ruins and restored elements still convey its former glory.",
-  imageUrl: "/images/kaiserbagh.jpg",
+  imageUrl: "/images/Kaiserbagh.jpg",
   yearBuilt: "1848–1856",
   location: "Kaiserbagh, Lucknow, Uttar Pradesh",
   visitingHours: "Sunrise to Sunset",
@@ -309,7 +309,7 @@ const filteredHavelis = [
   shortDescription: "Residence built for the Begums of Awadh, blending European flair.",
   fullDescription:
     "Begum Kothi, built in early 19th century near Kaiserbagh, housed the Begums of Awadh. Featuring classical columns, arches, verandahs, and spacious rooms, it blends European neoclassical elements with Awadhi sensibilities, though now mostly in ruins.",
-  imageUrl: "/images/begum-kothi.jpg",
+  imageUrl: "/images/Begum-Kothi.jpg",
   yearBuilt: "c. 1820",
   location: "Kaiserbagh Road, Lucknow, Uttar Pradesh",
   visitingHours: "Sunrise to Sunset",
@@ -335,7 +335,7 @@ const filteredHavelis = [
   shortDescription: "Once Nawab Saadat Ali Khan's residence, later the seat of British power.",
   fullDescription:
     "Farhat Baksh Kothi, located in Qaiserbagh, was originally built by Nawab Saadat Ali Khan and served as a royal residence. After the fall of Awadh, it became the official residence of General Outram, symbolizing the British takeover. The kothi features European-style arcades, tall windows, and spacious lawns.",
-  imageUrl: "/images/farhat-baksh.jpg",
+  imageUrl: "/images/Farhat-Baksh.jpg",
   yearBuilt: "Early 19th Century",
   location: "Qaiserbagh, Lucknow, Uttar Pradesh",
   visitingHours: "9:00 AM - 5:00 PM",
@@ -362,7 +362,7 @@ const filteredHavelis = [
   shortDescription: "A scenic riverside haveli built for royal leisure and celebrations.",
   fullDescription:
     "Darshan Vilas Kothi was designed to offer panoramic views of the Gomti River and served as a retreat for Nawabi royalty. With expansive terraces and serene gardens, it was often used for royal gatherings and cultural performances.",
-  imageUrl: "/images/darshan-vilas.jpg",
+  imageUrl: "/images/Darshan-Vilas.jpg",
   yearBuilt: "Mid 19th Century",
   location: "Riverside, Lucknow",
   visitingHours: "10:00 AM - 6:00 PM",
@@ -388,7 +388,7 @@ const filteredHavelis = [
   shortDescription: "Part of the British Residency complex, linked to the 1857 revolt.",
   fullDescription:
     "Hayat Baksh Kothi, embedded within the Lucknow Residency, was an important structure during the 1857 First War of Independence. Used by British officers, the building now stands in ruins, echoing the turbulent colonial past.",
-  imageUrl: "/images/hayat-baksh.jpg",
+  imageUrl: "/images/Hayat-Baksh.jpg",
   yearBuilt: "Before 1857",
   location: "Residency Complex, Lucknow",
   visitingHours: "8:00 AM - 6:00 PM",
@@ -414,7 +414,7 @@ const filteredHavelis = [
   shortDescription: "A graceful palace known for its Nawabi luxury and artistry.",
   fullDescription:
     "Mubarak Manzil stands as a symbol of refined Nawabi taste. Once a home to nobility, it is adorned with delicate jaalis, wide verandahs, and arch-framed windows. The haveli tells stories of Lucknow’s sophisticated lifestyle and courtly grace.",
-  imageUrl: "/images/mubarak-manzil.jpg",
+  imageUrl: "/images/Mubarak-Manzil.jpg",
   yearBuilt: "Early 19th Century",
   location: "Qaiserbagh, Lucknow",
   visitingHours: "9:30 AM - 5:30 PM",
@@ -466,7 +466,7 @@ const filteredHavelis = [
   shortDescription: "An elegant kothi reflecting refined Mughal-Awadhi lifestyle.",
   fullDescription:
     "Kothi Noor Baksh exemplifies the gracious Nawabi lifestyle with its calm courtyards, delicately designed balconies, and airy interiors. The kothi was used both as a residence and cultural venue, known for its mehfils and poetry recitations.",
-  imageUrl: "/images/noor-baksh1.jpg",
+  imageUrl: "/images/Noor-Baksh1.jpg",
   yearBuilt: "19th Century",
   location: "Central Lucknow",
   visitingHours: "9:00 AM - 6:00 PM",
@@ -492,7 +492,7 @@ const filteredHavelis = [
   shortDescription: "Palace of Begum Khursheed, known for its pivotal role in 1857.",
   fullDescription:
     "Built by Nawab Ghazi-ud-Din Haider for his beloved wife, Begum Khursheed, this haveli later became a battleground during the revolt of 1857. Its semi-circular façade and majestic lawn reflect its grandeur, now functioning as an educational institution.",
-  imageUrl: "/images/khursheed-manzil.jpg",
+  imageUrl: "/images/Khursheed-manzil.jpg",
   yearBuilt: "Early 19th Century",
   location: "Hazratganj, Lucknow",
   visitingHours: "Monday to Saturday, 9:00 AM - 4:00 PM",
@@ -518,7 +518,7 @@ const filteredHavelis = [
   shortDescription: "‘Palace of Pearls’ used for royal observation over the Gomti River.",
   fullDescription:
     "Moti Mahal, a pearl among Lucknow’s monuments, was part of a group of palaces used to watch elephant fights and river ceremonies. Its balconies offered royal views over the Gomti. Today, its domes and charm continue to mesmerize visitors.",
-  imageUrl: "/images/moti-mahal.jpg",
+  imageUrl: "/images/Moti-Mahal.jpg",
   yearBuilt: "Mid 19th Century",
   location: "Qaiserbagh, Lucknow",
   visitingHours: "10:00 AM - 5:00 PM",
@@ -544,7 +544,7 @@ const filteredHavelis = [
   shortDescription: "Residences of feudal landlords—pillars of Awadh’s zamindari legacy.",
   fullDescription:
     "Taluqdar Havelis were grand estates owned by hereditary landlords (taluqdars) under the Nawabi and later British regimes. Spread across Lucknow and nearby areas, these havelis were known for hosting lavish durbars and maintaining regional control.",
-  imageUrl: "/images/taluqdar-havelis.jpg",
+  imageUrl: "/images/Taluqdar-Havelis.jpg",
   yearBuilt: "18th–19th Century",
   location: "Scattered across Lucknow",
   visitingHours: "By permission only",
