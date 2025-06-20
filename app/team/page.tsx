@@ -18,48 +18,42 @@ export default function TeamSection() {
       image: "/images/priyanshu.jpg",
       skills: ["React", "JavaScript", "UI Design", "Problem Solving"],
       year: "1st Year",
-      interest: "Full-Stack Development",
-    },
+      },
     {
       name: "Pranjal Sharma",
       role: "Co-Developer & Visual Content Provider",
       image: "/images/pranjal.png",
       skills: ["Frontend", "Design", "CSS", "Creativity"],
       year: "1st Year",
-      interest: "Web Design & Animation",
-    },
+      },
     {
       name: "Mohd. Asad Ahmed",
       role: "Media Curator & Visual Contributor",
       image: "/images/asad.jpg",
       skills: ["Photography", "Graphics", "Visual Arts", "Editing"],
       year: "1st Year",
-      interest: "Digital Media & Content",
-    },
+     },
     {
       name: "Sonal Pandey",
       role: "Prototype designer & voice Presenter",
       image: "/images/sonal.jpg",
       skills: ["Strategy", "UX Research", "Planning", "Analysis"],
       year: "1st Year",
-      interest: "User Experience Design",
-    },
+      },
     {
       name: "Shivansh Sharma",
       role: "Content Researcher – Heritage & History",
       image: "/images/shivansh.jpg",
       skills: ["Research", "Writing", "History", "Documentation"],
       year: "1st Year",
-      interest: "Cultural Heritage Studies",
-    },
+     },
     {
       name: "Shivendra Yadav",
       role: "Support & Coordination Team Member",
       image: "/images/shivendra.jpg",
       skills: ["Teamwork", "Communication", "Organization", "Support"],
       year: "1st Year",
-      interest: "Project Management",
-    },
+      },
   ]
 
   const teamStats = [
@@ -197,7 +191,7 @@ export default function TeamSection() {
                         {member.name}
                       </h3>
                       <p className="text-gray-400 text-sm leading-relaxed mb-3">{member.role}</p>
-                      <div className="text-[#49ce71] text-sm font-semibold">🎯 {member.interest}</div>
+                      
                     </div>
 
                     {/* Skills Tags */}
